@@ -46,7 +46,7 @@ client.on('message', async (receivedTopic, message) => {
 
 //route for health check
 app.get('/', (req, res) => {
-    res.status(200).json({ code:200,sucess:true,status: 'online',data:{message:"subscriber is running"} });
+    res.status(200).json({ code:200,sucess:true,status: 'online',data:{message:"subscriber is online"} });
 });
 
 // Start Express server
