@@ -32,7 +32,7 @@ client.on('message', async (receivedTopic, message) => {
         const timestamp = Date.now();
 
         // Save to Firebase Realtime Database
-        await saveToRealtimeDB(deviceId, timestamp, parsedData);
+        // await saveToRealtimeDB(deviceId, timestamp, parsedData);
 
         // Save to Firestore
         // await saveToFirestore(timestamp, parsedData);
