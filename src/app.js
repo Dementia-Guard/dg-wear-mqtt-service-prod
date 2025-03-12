@@ -5,12 +5,13 @@ import { saveToRealtimeDB, saveToFirestore } from './Service/firebaseService.js'
 import { saveToMongoDB } from './Service/mongoService.js';
 import envConfig from './Config/envConfig.js';
 
-const clientId = 'emqx_subscriber_' + Math.random().toString(16).substring(2, 8);
+const clientId = 'wearable_subscriber_' + Math.random().toString(16).substring(2, 8);
 const { topic, qos } = envConfig.mqtt;
 
 // Connect to the broker
 const client = connectMQTT({ clientId });
-const PORT = envConfig.sub_port; // Port for Express server
+// Port for Express server
+const PORT = envConfig.sub_port;
 
 // Subscribe to the topic
 client.subscribe(topic, { qos }, (error) => {
